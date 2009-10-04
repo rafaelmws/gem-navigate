@@ -1,0 +1,7 @@
+%h1 Gems instaladas
+
+#gems
+  - gems.keys.each do |gem_name| 
+    %p
+      %a{:href => "/#{gem_name}"}
+        =gem_name

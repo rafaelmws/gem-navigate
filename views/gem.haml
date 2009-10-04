@@ -1,0 +1,9 @@
+-if gems.nil?
+  %h1 A gem "#{gem_name}" n&atilde;o est&aacute; instalada
+-else
+  %h1 #{gem_name}
+
+  %ul{:class => 'gem_versions'}
+    - gems.each do |gem|
+      %li 
+        %a{:href => "/#{gem_name}/#{gem.version}"} #{gem.version}

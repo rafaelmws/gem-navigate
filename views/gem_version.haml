@@ -1,0 +1,25 @@
+- if gem.nil?
+  %h1 A vers&atilde;o #{gem_version} de #{gem_name}, n&atilde;o foi encontrada.
+- else
+  
+  %h1 #{gem_name}, v #{gem_version}
+
+  %fieldset
+    %legend Detalhes
+
+    %p
+      site :
+      %strong
+        =gem.homepage
+    %p
+      email :
+      %strong
+        =gem.email
+    %p
+      authors
+      %strong
+        =gem.authors
+
+  #link_rdoc
+    %a{:href => "/#{rdoc}/index.html"} RDOC
+    %strong file://#{rdoc}/index.html
