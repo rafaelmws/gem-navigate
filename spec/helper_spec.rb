@@ -39,5 +39,8 @@ describe GemHelper,"Metodos que trazem valores da gem" do
     expect = File.join(@gem_dir_base[1], @spec_dir, '../doc/file-1.1.0/rdoc')
     rdoc_dir.should == expect
   end
-
+  
+  it 'retorna a instancia dos gemspecs instalados' do
+    
+  end
 end

@@ -1,7 +1,11 @@
 %h1 Gems instaladas
 
+%fieldset{:class => 'search'}
+  %label{:for => 'busca'} Busca ;-)
+  %input{:type => 'text',:id => 'busca'}
+
 #gems
   - gems.keys.each do |gem_name| 
-    %p
-      %a{:href => "/#{gem_name}"}
+    .gem
+      %a{:href => "/#{gem_name}", :class => 'gem_title'}
         =gem_name

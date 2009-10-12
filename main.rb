@@ -1,10 +1,15 @@
 require "rubygems"
 require "sinatra"
 require "gem_helper"
+require 'helper'
 
 get "/" do
   gem_helper = GemHelper.new
   haml :index, :locals => { :gems => gem_helper.get_gemspecs } 
+end
+
+get "/style.css" do
+  sass :style
 end
 
 get "/:gem" do
